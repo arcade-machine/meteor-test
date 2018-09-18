@@ -5,16 +5,19 @@
   margin 0
   position relative
   list-style none
+  display flex
+  align-items center
+  justify-content center
 
 .slider__item
+  min-height 290px
+  display flex
+  align-items center
   position: absolute
   left: 0
   top: 0
   opacity: 0
   z-index: 1
-  display flex
-  align-items center
-  justify-content center
   transition: opacity 0.6s
 
   &:nth-child(2)

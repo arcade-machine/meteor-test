@@ -13,6 +13,7 @@
   font-display swap
 
 body
+  min-width 320px
   font-family "PT Sans", Arial, serif
   font-size 14px
   min-height: 100%
@@ -30,3 +31,9 @@ img
   margin-bottom 20px
   background: #ffffff
   box-sizing border-box
+
+$tablet = 1050px
+
+@media (max-width: $tablet)
+  .wrapper
+    width 90%

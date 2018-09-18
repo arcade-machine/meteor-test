@@ -13,6 +13,7 @@
   font-display: swap;
 }
 body {
+  min-width: 320px;
   font-family: "PT Sans", Arial, serif;
   font-size: 14px;
   min-height: 100%;
@@ -30,6 +31,11 @@ img {
   margin-bottom: 20px;
   background: #fff;
   box-sizing: border-box;
+}
+@media (max-width: 1050px) {
+  .wrapper {
+    width: 90%;
+  }
 }
 .main-header {
   width: 100%;
@@ -51,6 +57,11 @@ img {
 }
 .main-header__phone:visited {
   color: #000;
+}
+.main-header__wrapper {
+  width: 100%;
+  min-height: 290px;
+  position: relative;
 }
 .navigation {
   width: 100%;
@@ -98,6 +109,18 @@ img {
 .navigation__link:visited {
   color: #fff;
 }
+@media (max-width: 1050px) {
+  .navigation__list {
+    flex-direction: column;
+  }
+  .navigation__item {
+    width: 100%;
+    padding: 0;
+  }
+  .navigation__item--current {
+    min-height: 35px;
+  }
+}
 .slider {
   width: 100%;
   min-height: 290px;
@@ -105,16 +128,19 @@ img {
   margin: 0;
   position: relative;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slider__item {
+  min-height: 290px;
+  display: flex;
+  align-items: center;
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: opacity 0.6s;
 }
 .slider__item:nth-child(2) {
@@ -135,7 +161,7 @@ img {
 }
 .slider-controls {
   position: absolute;
-  bottom: -8%;
+  bottom: -30px;
   left: 48%;
   background-color: #f00;
 }

@@ -1,6 +1,6 @@
 // объявление переменных
-const slides = document.querySelectorAll(".slider__item");
-const dots = document.querySelectorAll(".slider-controls__dot");
+var slides = document.querySelectorAll(".slider__item");
+var dots = document.querySelectorAll(".slider-controls__dot");
 var currentSlide = 0;
 
 // логика для слайдера
